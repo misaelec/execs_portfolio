@@ -1,4 +1,4 @@
-function animateCount(countElement, targetNumber, duration = 600) {
+function animateCount(countElement, targetNumber, duration = 700) {
   let start = 0;
   const increment = targetNumber / (duration / 10);
 
@@ -39,3 +39,21 @@ window.addEventListener('scroll', () => {
     });
   }
 });
+
+const bannerContainer = document.querySelector('.banner-container');
+const bannerWidth = bannerContainer.scrollWidth;
+const containerWidth = bannerContainer.clientWidth;
+let scrollPosition = 0;
+
+function animateBanner() {
+  scrollPosition += 1.5; // Adjust scroll speed as needed
+  bannerContainer.scrollLeft = scrollPosition;
+
+  if (scrollPosition >= bannerWidth - containerWidth) {
+    scrollPosition = 0;
+  }
+
+  requestAnimationFrame(animateBanner);
+}
+
+animateBanner();

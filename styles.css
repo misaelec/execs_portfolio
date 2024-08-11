@@ -131,8 +131,7 @@ body {
   .column-numbers {
     border: none;
     padding: 1rem;
-    align-self: center;
-    text-align:justify;
+    align-self:baseline;
   }
   
   .name-title {
@@ -266,3 +265,36 @@ body {
     text-transform: uppercase;
     line-height: 2rem;
   }
+ 
+  .banner-container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+    height: 2.1rem /* Adjust height as needed */
+  }
+  
+  .banner {
+    display: flex;
+  }
+  
+  .banner img {
+    object-fit: contain;
+    object-position: center;
+    align-self: center;
+    flex-shrink: 0;
+    padding-right: 4rem;
+    max-height: 2rem;
+  }
+  
+  .banner-container::-webkit-scrollbar {
+    display: none;
+}
+  .banner-container {
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  
+  
