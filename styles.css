@@ -1,7 +1,8 @@
 :root {
     --bg-color: #000;
     --text-color: #fff;
-    --hover-color: #a3a3a3;
+    --hover-color: #333;
+    --text2-color: #a3a3a3;
   }
   
 
@@ -16,7 +17,7 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: var(--bg-color);
+    background-color:var(--bg-color);
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -57,6 +58,8 @@ body {
   .navbar li a {
     text-decoration: none;
     color: inherit;
+    font-weight: 800;
+    font-size: small;
   }  
   
   .navbar-menu a {
@@ -72,4 +75,194 @@ body {
       text-align: center;
     }
   }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
   
+  /*grid w images*/
+  .container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Create two equal columns */
+    margin-bottom: 1rem;
+  }
+
+  .item {
+    /* Optional styles for grid items */
+    text-align: end; /* Center image horizontally */
+    align-self: center;
+  }
+  
+  img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 1.5rem;
+  }
+
+  .column {
+    border: none;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .column-experience {
+    border: none;
+    padding: 1rem;
+    align-self: center;
+    text-align: left;
+  }
+
+  .column-dates {
+    border: none;
+    padding: 1rem;
+    text-align: end;
+  }
+
+  .column-jobs {
+    border: none;
+    padding: 1rem;
+    align-self: center;
+    text-align: end;
+  }
+  
+  .column-numbers {
+    border: none;
+    padding: 1rem;
+    align-self: center;
+    text-align:justify;
+  }
+  
+  .name-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 0;
+  }
+
+  .ux-subtitle {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 0;
+  }
+  
+  .paragraph-title {
+    font-size: 0.8rem;
+    font-weight: lighter;
+    color: var(--text2-color);
+  }
+
+  .white-bold-txt {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  .social-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .button-with-image {
+    font-size: 1rem;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--hover-color); /* Color de fondo verde */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    text-decoration: none; /* Quita el subrayado por defecto */
+  }
+  
+  .button-with-image img {
+    margin-right: 0.5rem;
+    height: 1rem;
+  }
+
+  .experience-section {
+      padding-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust column widths as needed */
+  }
+
+  .experience-grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust column widths as needed */
+    grid-template-rows: repeat(4, 1fr); /* 4 filas de igual alto */
+    grid-row-end: var(--text-color);
+  }
+
+  .row {
+    display: block;
+    flex-direction: row;
+    align-items: center; /* Optional: vertically center content */
+  }
+  
+  .row::after {
+    content: "";
+    display: block;
+    height: 0.05rem;
+    background-color: var(--text2-color);
+  }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    grid-template-rows: repeat(2, 1fr); /* 4 filas de igual alto */
+    grid-row-end: var(--text-color);
+  }
+
+  .numbers-data {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0;
+    text-transform: uppercase;
+  }
+
+  .numbers-description {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 0;
+  }
+
+  .numbers-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 0;
+    color: var(--text2-color);
+  }
+
+  .numbers-title {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 0;
+    text-transform: uppercase;
+    line-height: 2rem;
+    align-self: center;
+  }
+
+  .experience-past {
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 0;
+  }
+
+  .experience-jobs {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 0;
+    text-transform: uppercase;
+    line-height: 2rem;
+  }
