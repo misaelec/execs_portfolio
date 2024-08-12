@@ -60,9 +60,9 @@ body {
     position: relative;
     order: none;
     display: flex; /* Make the link a flex container */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  padding: 0.5rem 1rem;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 0.5rem 1rem;
   }  
 
   .navbar li a:hover {
@@ -106,6 +106,15 @@ body {
     grid-template-columns: 1fr 1fr; /* Create two equal columns */
     padding-top: 2rem;
     margin-bottom: 1rem;
+  }
+
+  .cases-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    padding-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    row-gap: 5rem;
   }
   
   /*grid w images*/
