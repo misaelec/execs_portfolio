@@ -121,16 +121,35 @@ body {
     align-self: center;
   }
   
-  img {
+  .item img {
     max-width: 100%; /* Ensure image doesn't exceed container width */
     height: auto; /* Maintain aspect ratio */
     max-height: 1.5rem;
+  }
+
+  .item-case img {
+    height: 3rem; /* Maintain aspect ratio */
+    max-height: 10rem;
+    width:auto;
   }
 
   .column {
     border: none;
     padding: 1rem;
     text-align: left;
+  }
+
+  .column-case {
+    border: none;
+    text-align: center;
+    align-self: center;
+  }
+
+  .column-cases {
+    padding-top: 1rem;
+    border: none;
+    text-align: start;
+    align-self: center;
   }
 
   .column-experience {
@@ -226,6 +245,7 @@ body {
     grid-template-columns: repeat(3, 1fr); /* Adjust column widths as needed */
     grid-template-rows: 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem; /* 4 filas de igual alto */
     grid-row-end: var(--text-color);
+    margin-bottom: 4rem;
   }
 
   .row {
@@ -245,7 +265,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
     grid-template-rows: repeat(2, 1fr); /* 4 filas de igual alto */
-    grid-row-end: var(--text-color);
   }
 
   .numbers-data {
@@ -321,11 +340,81 @@ body {
     scrollbar-width: none;  /* Firefox */
   }
   
+  .case-image img {
+    height:18rem;
+    border-radius: 10rem;
+  }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+    grid-template-rows: repeat(1, 1fr); /* 4 filas de igual alto */
+  }
+
+.cases-stats-title {
+  font-size: 1.1rem;
+    font-weight:bolder;
+    line-height: 0;
+}
+
+.cases-stats-description {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  line-height: 0;
+  color: var(--text2-color);
+}
+
+.cases-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 0;
+}
+
+.case-button-with-image {
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+.case-button-with-image:hover {
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+.case-button-with-image svg {
+  margin-left: 0.5rem;
+  height: 1rem;
+  width: auto;
+}
+
+.cases-paragraph-title {
+  font-size: 0.9rem;
+    font-weight: lighter;
+    color: var(--text2-color);
+}
+
+/* -------------------------------------------- */
   footer {
+    margin-top: 3rem;
     width: 100%;
     color: var(--text2-color);
     text-align: center;
-    /* Other styles for your footer */
   }
   
   
