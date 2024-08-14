@@ -1,4 +1,4 @@
 deployment:
-  path: /home/misayybm  # Deployment directory (default)
+  path: public_html  # Deployment directory (default)
   exclude: [         # Files/directories to exclude
   ]

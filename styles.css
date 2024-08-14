@@ -137,6 +137,10 @@ body {
     width:auto;
   }
 
+.social-menu a {
+  text-decoration: none;
+}
+
   .column {
     border: none;
     padding: 1rem;
