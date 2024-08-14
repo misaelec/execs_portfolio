@@ -222,6 +222,36 @@ body {
     color: var(--text2-color);
   }
 
+  .experience-text {
+    font-size: var(--text-size-little);
+    font-weight: lighter;
+    color: var(--text2-color);
+    text-align: right;
+  }
+
+  .experience-dates {
+    font-size: var(--text-size-little);
+    font-weight: lighter;
+    color: var(--text2-color);
+    text-align: right;
+    display: none;
+  }
+
+  .experience-dates-small {
+    font-size: var(--text-size-little);
+    font-weight: lighter;
+    color: var(--text2-color);
+    text-align: right;
+    display: none;
+  }
+
+  .experience-company {
+    font-size: var(--text-size-little);
+    font-weight: lighter;
+    color: var(--text2-color);
+    text-align: right;
+  }
+
   .white-bold-txt {
     font-weight: bold;
     color: var(--text-color);
@@ -286,8 +316,21 @@ body {
     flex-direction: row;
     align-items: center; /* Optional: vertically center content */
   }
+
+  .rowhide {
+    display: block;
+    flex-direction: row;
+    align-items: center; /* Optional: vertically center content */
+  }
   
   .row::after {
+    content: "";
+    display: block;
+    height: 0.05rem;
+    background-color: var(--text2-color);
+  }
+
+  .rowhide::after {
     content: "";
     display: block;
     height: 0.05rem;
@@ -513,6 +556,7 @@ body {
   font-size: var(--text-size-little);
   font-weight: 100;
   color: var(--text2-color);
+  line-height: 1rem;
 }
 
 .bubble-container {
@@ -600,6 +644,35 @@ body {
       font-weight: 600;
     }
 
+    .experience-grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Adjust column widths as needed */
+        grid-row-end: var(--text-color);
+        margin-bottom: 4rem;
+    }
+
+    .experience-dates-small {
+      display: inline;
+    }
+
+    .experience-company {
+      display: none;
+    }
+
+    .rowhide {
+      display: none;
+    }
+
+    .experience-grid, .experience-grid2 {
+      display: none;
+    }
+
+    .wow-title {
+      font-size: 1rem;
+      align-self: center;
+      text-align: start;
+    }
+
     body {
       margin: 0;
     }
@@ -608,6 +681,10 @@ body {
   @media (min-width: 950px) {
     
     .experience-past {
+      display: block;
+    }
+
+    .experience-dates {
       display: block;
     }
   }
