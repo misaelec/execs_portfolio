@@ -94,6 +94,14 @@ body {
     color: var(--text-color);
   }
 
+  .cv-span-large {
+    display: none;
+  }
+
+  .cv-span-small {
+    display: none;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr; /* Create two equal columns */
@@ -600,7 +608,7 @@ body {
     text-align: center;
   }
   
-  @media (max-width: 950px) {
+  @media (orientation: portrait) {
     .navbar {
       display: none;
       margin: 0;
@@ -675,18 +683,26 @@ body {
       text-align: start;
     }
 
+    .cv-span-small {
+      display: block;
+    }
+
     body {
       margin: 0;
     }
   }
 
-  @media (min-width: 950px) {
+  @media (orientation: landscape) {
     
     .experience-past {
       display: block;
     }
 
     .experience-dates {
+      display: block;
+    }
+
+    .cv-span-large {
       display: block;
     }
   }
@@ -701,7 +717,7 @@ body {
     }
   }
   
-  @media (min-width: 950px) {
+  @media (orientation: landscape) {
     #cv-span-large {
       display: inline;
     }
