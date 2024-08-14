@@ -99,7 +99,7 @@ body {
     grid-template-columns: 1fr; /* Create two equal columns */
     /* grid-template-columns: 1fr 1fr; /* Switch to this when video is added */
     padding-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
   }
 
   .cases-container {
@@ -139,6 +139,18 @@ body {
 
 .social-menu a {
   text-decoration: none;
+    align-items: center;
+    background-color: none; 
+    border: none;
+}
+
+.social-menu a :hover{
+  text-decoration: none;
+  background-color: var(--text-color); 
+  color: var(--bg-color);
+  cursor: pointer;
+  border-radius: 2rem;
+  width:max-content;
 }
 
   .column {
@@ -158,6 +170,12 @@ body {
     border: none;
     text-align: start;
     align-self: center;
+  }
+
+  .column-numbers-priority {
+    border: none;
+    padding: 1rem;
+    align-self:baseline;
   }
 
   .column-experience {
@@ -239,12 +257,12 @@ body {
     height: 1rem;
   }
 
-  .social-menu :hover{
+  /* .social-menu :hover{
     background-color: var(--text-color); 
     color: var(--bg-color);
     cursor: pointer;
     border-radius: 2rem;
-  }
+  } */
   .experience-section {
       padding-top: 2rem;
       margin-bottom: 1rem;
@@ -315,6 +333,14 @@ body {
     font-size: 1.2rem;
     font-weight: 900;
     line-height: 0;
+    display: none;
+  }
+
+  .experience-past-small {
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 0;
+    display: none;
   }
 
   .experience-jobs {
@@ -528,5 +554,83 @@ body {
   @media (max-width: 950px) {
     .navbar {
       display: none;
+      margin: 0;
+    }
+
+    .column {
+      text-align: center;
+    }
+
+    .column-numbers {
+      display: none;
+    }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* 3 columnas de igual ancho */
+      grid-template-rows: repeat(3, 1fr); /* 4 filas de igual alto */
+      text-align: center;
+    }
+
+    .paragraph-title {
+      text-align: justify;
+    }
+
+    .social-menu {
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Center the grid horizontally */
+    margin-bottom: 1rem;
+    }
+
+    .container2 {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .experience-past-small {
+      display: block;
+      font-weight: 600;
+    }
+
+    body {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 950px) {
+    
+    .experience-past {
+      display: block;
+    }
+  }
+
+  #cv-span-small, #cv-span-large {
+    display: none;
+  }
+  
+  @media (max-width: 950px) {
+    #cv-span-small {
+      display: inline;
+    }
+  }
+  
+  @media (min-width: 950px) {
+    #cv-span-large {
+      display: inline;
+    }
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
   }
