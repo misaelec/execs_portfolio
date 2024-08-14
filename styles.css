@@ -185,6 +185,13 @@ body {
     text-align: left;
   }
 
+  .column-experience-hide {
+    border: none;
+    padding: 1rem;
+    align-self: center;
+    text-align: left;
+  }
+
   .column-dates {
     border: none;
     padding: 1rem;
@@ -233,7 +240,7 @@ body {
     font-size: var(--text-size-little);
     font-weight: lighter;
     color: var(--text2-color);
-    text-align: right;
+    text-align: left;
     display: none;
   }
 
@@ -241,7 +248,7 @@ body {
     font-size: var(--text-size-little);
     font-weight: lighter;
     color: var(--text2-color);
-    text-align: right;
+    text-align: left;
     display: none;
   }
 
@@ -249,7 +256,7 @@ body {
     font-size: var(--text-size-little);
     font-weight: lighter;
     color: var(--text2-color);
-    text-align: right;
+    text-align: left;
   }
 
   .white-bold-txt {
@@ -313,13 +320,11 @@ body {
 
   .row {
     display: block;
-    flex-direction: row;
     align-items: center; /* Optional: vertically center content */
   }
 
   .rowhide {
     display: block;
-    flex-direction: row;
     align-items: center; /* Optional: vertically center content */
   }
   
@@ -646,24 +651,21 @@ body {
 
     .experience-grid2 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Adjust column widths as needed */
-        grid-row-end: var(--text-color);
+        grid-template-columns: 1fr 1fr; /* Adjust column widths as needed */
+        grid-template-rows: 1fr 0fr 1fr 0 1fr 0 1fr 0;
         margin-bottom: 4rem;
+        max-width: 100%;
     }
 
     .experience-dates-small {
       display: inline;
     }
 
-    .experience-company {
+    .column-experience-hide {
       display: none;
     }
 
     .rowhide {
-      display: none;
-    }
-
-    .experience-grid, .experience-grid2 {
       display: none;
     }
 
