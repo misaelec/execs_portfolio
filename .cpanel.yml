@@ -1,0 +1,4 @@
+deployment:
+  path: public_html  # Deployment directory (default)
+  exclude: [         # Files/directories to exclude
+  ]
