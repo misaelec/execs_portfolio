@@ -173,6 +173,7 @@ body {
     align-self: center;
   }
 
+
   .column-cases {
     padding-top: 1rem;
     border: none;
@@ -296,12 +297,54 @@ body {
     border-radius: 2rem;
     text-decoration: none; /* Quita el subrayado por defecto */
   }
+
+  .skills {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--text-color); 
+    color: var(--bg-color);
+    border: solid;
+    border-width: 0.1rem;
+    border-radius: 2rem;
+  }
   
   .button-with-image img {
     margin-right: 0.5rem;
     height: 1rem;
   }
 
+  .snapshots-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr; /* Create two equal columns */
+    padding: 1rem;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .snapshots-column img {
+    max-height: 30rem;
+    margin-top: 1rem;
+  }
+
+.snapshots-column {
+  text-align: center;
+}
+
+.snapshots-column-challenge {
+  align-self: center;
+}
+
+.snapshots-column-challenge p {
+  font-size: var(--text-size);
+}
+
+.snapshots-column span {
+  font-size: large;
+  font-weight:600;
+}
   /* .social-menu :hover{
     background-color: var(--text-color); 
     color: var(--bg-color);
@@ -439,12 +482,18 @@ body {
   
   .cases-section {
     padding-top: 1rem;
-    display: none;
   }
 
   .case-image img {
     height:18rem;
+    width: 18rem;
     border-radius: 10rem;
+    object-fit: cover;
+  }
+
+  .case-inside-image img {
+    height:8rem;
+    padding-right: 5rem;
   }
 
   .cases-grid {
@@ -485,6 +534,11 @@ body {
   text-decoration: none; /* Quita el subrayado por defecto */
 }
 
+.case-button-with-image a {
+  text-decoration: none;
+  color: #000;
+}
+
 .case-button-with-image:hover {
   font-size: 1rem;
   font-weight: 400;
@@ -506,9 +560,21 @@ body {
 }
 
 .cases-paragraph-title {
-  font-size: var(--text-size-little);
+  font-size: var(--text-size);
     font-weight: lighter;
     color: var(--text2-color);
+}
+
+.cases-paragraph-inside{
+    font-size: var(--text-size);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.cases-paragraph-inside-title{
+  font-size: var(--text-size);
+  font-weight: 500;
+  color: var(--text2-color);
 }
 
 .about-skills-title {
@@ -689,6 +755,10 @@ body {
 
     body {
       margin: 0;
+    }
+
+    #cases {
+      display: none;
     }
   }
 
