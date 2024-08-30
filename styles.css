@@ -323,6 +323,13 @@ body {
     gap: 2rem;
     margin-top: 3rem;
   }
+  .snapshots-container-mc {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    padding: 1rem;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
 
   .snapshots-column img {
     max-height: 30rem;
