@@ -125,7 +125,7 @@ body.bac
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 10rem;
-    background-color: var(--text-color);
+   /* background-color: var(--text-color); */
   }
 
   .item {
