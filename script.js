@@ -58,30 +58,30 @@ function animateBanner() {
 
 animateBanner();
 
-const bubbleContainer = document.querySelector('.bubble-container');
+// const bubbleContainer = document.querySelector('.bubble-container');
 
-function createBubble() {
-  const bubble = document.createElement('div');
-  bubble.classList.add('bubble');
+// function createBubble() {
+//   const bubble = document.createElement('div');
+//   bubble.classList.add('bubble');
 
-  // Randomize size, position, and color
-  const size = Math.random() * 40 + 10;
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
+//   // Randomize size, position, and color
+//   const size = Math.random() * 40 + 10;
+//   bubble.style.width = `${size}px`;
+//   bubble.style.height = `${size}px`;
 
-  const x = Math.random() * 100;
-  const y = Math.random() * 100;
-  bubble.style.left = `${x}%`;
-  bubble.style.top = `${y}%`;
+//   const x = Math.random() * 100;
+//   const y = Math.random() * 100;
+//   bubble.style.left = `${x}%`;
+//   bubble.style.top = `${y}%`;
 
-  const colors = ['#F0E68C', '#87CEEB', '#FFB6C1'];
-  bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+//   const colors = ['#F0E68C', '#87CEEB', '#FFB6C1'];
+//   bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
-  bubbleContainer.appendChild(bubble);
+//   bubbleContainer.appendChild(bubble);
 
-  setTimeout(() => {
-    bubble.remove();
-  }, 4000 + Math.random() * 2000); // Random lifespan
-}
+//   setTimeout(() => {
+//     bubble.remove();
+//   }, 4000 + Math.random() * 2000); // Random lifespan
+// }
 
-setInterval(createBubble, 500); // Create bubbles every 500ms
+// setInterval(createBubble, 500); // Create bubbles every 500ms

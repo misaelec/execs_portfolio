@@ -6,10 +6,59 @@
   <title>Misael Espinosa</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/qim0doq.css">
+  <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 5rem; /* Match the height of the bottom bar */
+  }
+
+  /* Adding background image with opacity */
+  body::before {
+    content: "";
+    background: url('./src/wallpaper.jpeg') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03; /* Adjust opacity level */
+    z-index: -1; /* Keeps the image behind content */
+  }
+
+  /* Example for other elements */
+  .container, .experience-grid, .cases-container, .social-menu {
+    position: relative;
+    z-index: 1; /* Ensures your content appears over the background */
+  }
+
+  .top-gradient-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem; /* Height of the top bar */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
+    z-index: 1000; /* Ensures it stays on top of other content */
+  }
+
+  /* Gradient bar at the bottom */
+  .bottom-gradient-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem; /* Height of the bottom bar */
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
+    z-index: 1000; /* Ensures it stays on top of other content */
+  }
+</style>
 </head>
   <body>
-    <div class="bubble-container"></div>
-    <nav class="navbar">
+    <div class="top-gradient-bar"></div>
+  <div class="bottom-gradient-bar"></div>
+    <!--<div class="bubble-container"></div>
+     <nav class="navbar">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -17,7 +66,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
     <section id="home">
       <div class="container">
         <div class="column">
@@ -44,18 +93,17 @@
                 <span>LinkedIn</span>
               </button>
             </a>
-          </a>
-          <a href="https://wa.me/525545502585" target="_blank">
-          <button class="button-with-image">
-            <img src="./src/whatsapp.png" alt="Send WhatsApp message">
-            <span>WhatsApp</span>
-          </button>
-          </a>
             <a href="mailto:misael.ux@icloud.com" target="_blank">
-            <button class="button-with-image">
-              <img src="./src/mail.png" alt="Send an email">
-              <span>Email</span>
-            </button>
+              <button class="button-with-image">
+                <img src="./src/mail.png" alt="Send an email">
+                <span>Email</span>
+              </button>
+            </a>
+            <a href="https://wa.me/525545502585" target="_blank">
+              <button class="button-with-image">
+                <img src="./src/whatsapp.png" alt="Send WhatsApp message">
+                <span>WhatsApp</span>
+              </button>
             </a>
           <a href="https://drive.google.com/file/d/1dZ4A5DhMbBZCpXvt5kM-u6CQ-wgOO_WG/view?usp=share_link" target="_blank">
             <button class="button-with-image">
@@ -63,7 +111,7 @@
               <span class="cv-span-small">CV</span>
               <span class="cv-span-large">CV / Resume</span>
             </button>
-            </a>
+          </a>
           </div>
         </div>
         <!-- <div class="column">
@@ -80,10 +128,10 @@
         <div class="column-dates">
           <p class="experience-text">2016 - 2024</p>
         </div>
-        <div class="row">
+        <!-- <div class="row">
         </div>
         <div class="row">
-        </div>
+        </div> -->
       </div>
       <div class="experience-grid2">
         <div class="column-experience">
@@ -144,12 +192,12 @@
           <div class="column-jobs">
             <span class="experience-jobs">Customer Success</span>
           </div>
-          <div class="row">
+          <!-- <div class="row">
           </div>
           <div class="row">
           </div>
           <div class="rowhide">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="banner-container">
@@ -242,13 +290,6 @@
           <p class="cases-paragraph-title">In this project I designed the content for the push notifications during the onboarding for new users.</p>
           <button class="case-button-with-image">
             <a href="./paypal.html">View case study</a>
-            <svg fill="#000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-             viewBox="0 0 330 330" xml:space="preserve">
-              <path id="XMLID_2_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M225.606,175.605
-                l-80,80.002C142.678,258.535,138.839,260,135,260s-7.678-1.464-10.606-4.394c-5.858-5.857-5.858-15.355,0-21.213l69.393-69.396
-                l-69.393-69.392c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l80,79.998
-                c2.814,2.813,4.394,6.628,4.394,10.606C230,168.976,228.42,172.792,225.606,175.605z"/>
-            </svg>
           </button>          
             <div class="cases-grid">
               <div class="column-cases">
@@ -283,13 +324,6 @@
           <p class="cases-paragraph-title"> I designed a chatbot for McDonald's food delivery service.</p>
           <button class="case-button-with-image">
             <a href="./mcdonalds.html">View case study</a>
-            <svg fill="#000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-             viewBox="0 0 330 330" xml:space="preserve">
-              <path id="XMLID_2_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M225.606,175.605
-                l-80,80.002C142.678,258.535,138.839,260,135,260s-7.678-1.464-10.606-4.394c-5.858-5.857-5.858-15.355,0-21.213l69.393-69.396
-                l-69.393-69.392c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l80,79.998
-                c2.814,2.813,4.394,6.628,4.394,10.606C230,168.976,228.42,172.792,225.606,175.605z"/>
-            </svg>
           </button>          
             <div class="cases-grid">
               <div class="column-cases">
@@ -324,13 +358,6 @@
           <p class="cases-paragraph-title">I designed a chatbot to ptomote a new Prime Video streaming show.</p>
           <button class="case-button-with-image">
             <a href="./primevideo.html">View case study</a>
-            <svg fill="#000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-             viewBox="0 0 330 330" xml:space="preserve">
-              <path id="XMLID_2_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M225.606,175.605
-                l-80,80.002C142.678,258.535,138.839,260,135,260s-7.678-1.464-10.606-4.394c-5.858-5.857-5.858-15.355,0-21.213l69.393-69.396
-                l-69.393-69.392c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l80,79.998
-                c2.814,2.813,4.394,6.628,4.394,10.606C230,168.976,228.42,172.792,225.606,175.605z"/>
-            </svg>
           </button>          
             <div class="cases-grid">
               <div class="column-cases">
@@ -443,32 +470,32 @@
       </section>   
     <section id="contact">
       <div class="container">
-        <div class="column">
-          <p class="name-title">Get in touch</p>
+        <div class="footer-column">
+          <p class="footer-title">Get in touch</p>
           <div class="social-menu">
+            <a href="https://mx.linkedin.com/in/misaelec" target="_blank">
+              <button class="button-with-image">
+                <img src="./src/linkedin.png" alt="Go to LinkedIn">
+                <span>LinkedIn</span>
+              </button>
+            </a>
             <a href="mailto:misael.ux@icloud.com" target="_blank">
-            <button class="button-with-image">
-              <img src="./src/mail.png" alt="Send an email">
-              <span>Email</span>
-            </button>
-          </a>
-          <a href="https://mx.linkedin.com/in/misaelec" target="_blank">
-            <button class="button-with-image">
-              <img src="./src/linkedin.png" alt="Go to LinkedIn">
-              <span>LinkedIn</span>
-            </button>
-          </a>
+              <button class="button-with-image">
+                <img src="./src/mail.png" alt="Send an email">
+                <span>Email</span>
+              </button>
+            </a>
+            <a href="https://wa.me/525545502585" target="_blank">
+              <button class="button-with-image">
+                <img src="./src/whatsapp.png" alt="Send WhatsApp message">
+                <span>WhatsApp</span>
+              </button>
+            </a>
           <a href="https://drive.google.com/file/d/1dZ4A5DhMbBZCpXvt5kM-u6CQ-wgOO_WG/view?usp=share_link" target="_blank">
             <button class="button-with-image">
               <img src="./src/google-drive.png" alt="Download my resume">
               <span class="cv-span-small">CV</span>
               <span class="cv-span-large">CV / Resume</span>
-            </button>
-          </a>
-            <a href="https://wa.me/525545502585" target="_blank">
-            <button class="button-with-image">
-              <img src="./src/whatsapp.png" alt="Send WhatsApp message">
-              <span>WhatsApp</span>
             </button>
           </a>
           </div>

@@ -1,20 +1,20 @@
 :root {
-    --bg-color: #000;
-    --text-color: #fff;
-    --hover-color: #333;
-    --text2-color: #a3a3a3;
+    --bg-color: #FBFBFB;
+    --text-color: #000;
+    --hover-color: #ECF3F9;
+    --text2-color: #A6A6A6;
     --text-size: 1.3rem;
     --text-size-little: calc(var(--text-size) - 0.3rem);
   }
   
-
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
     margin: 2rem;
-    padding: 1rem;
+    padding: 2rem;
     font-family: Futura PT, sans-serif;
-  }  
+  }
+
+body.bac
 
 .navbar {
     position: sticky;
@@ -106,8 +106,7 @@ body {
     display: grid;
     grid-template-columns: 1fr; /* Create two equal columns */
     /* grid-template-columns: 1fr 1fr; /* Switch to this when video is added */
-    padding-top: 2rem;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 4rem 0;
   }
 
   .cases-container {
@@ -124,6 +123,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Create two equal columns */
     margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    background-color: var(--text-color);
   }
 
   .item {
@@ -131,6 +133,7 @@ body {
     text-align: end; /* Center image horizontally */
     align-self: center;
     max-width: 10rem;
+    
   }
   
   .item img {
@@ -147,18 +150,20 @@ body {
 
 .social-menu a {
   text-decoration: none;
-    align-items: center;
+    justify-self: center;
     background-color: none; 
     border: none;
+    width:fit-content;
 }
 
 .social-menu a :hover{
   text-decoration: none;
-  background-color: var(--text-color); 
-  color: var(--bg-color);
+  background-color: var(--hover-color); 
+  color: var(--text-color);
   cursor: pointer;
   border-radius: 2rem;
-  width:max-content;
+  border: none;
+  width:fit-content;
 }
 
   .column {
@@ -183,7 +188,6 @@ body {
 
   .column-numbers-priority {
     border: none;
-    padding: 1rem;
     align-self:baseline;
   }
 
@@ -221,13 +225,13 @@ body {
   }
   
   .name-title {
-    font-size: 1.5rem;
+    font-size: 2.1rem;
     font-weight: 900;
     line-height: 0;
   }
 
   .ux-subtitle {
-    font-size: 1.5rem;
+    font-size: 2.1rem;
     font-weight: lighter;
     line-height: 0;
   }
@@ -235,20 +239,20 @@ body {
   .paragraph-title {
     font-size: var(--text-size-little);
     font-weight: lighter;
-    color: var(--text2-color);
+    color: var(--text-color);
   }
 
   .experience-text {
     font-size: var(--text-size-little);
     font-weight: lighter;
-    color: var(--text2-color);
+    color: var(--text-color);
     text-align: right;
   }
 
   .experience-dates {
     font-size: var(--text-size-little);
     font-weight: lighter;
-    color: var(--text2-color);
+    color: var(--text-color);
     text-align: left;
     display: none;
   }
@@ -263,8 +267,8 @@ body {
 
   .experience-company {
     font-size: var(--text-size-little);
-    font-weight: lighter;
-    color: var(--text2-color);
+    font-weight: bold;
+    color: var(--text-color);
     text-align: left;
   }
 
@@ -289,8 +293,8 @@ body {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: var(--bg-color); 
-    color: var(--text-color);
+    background-color: var(--text-color); 
+    color: var(--bg-color);
     border: solid;
     border-width: 0.1rem;
     cursor: pointer;
@@ -359,25 +363,31 @@ body {
     border-radius: 2rem;
   } */
   .experience-section {
-      padding-top: 2rem;
-      margin-bottom: 1rem;
+      margin: 2rem 0rem 10rem 0 ;
     }
 
   .experience-grid {
     display: grid;
+    /* background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0px 28px 28px 0px rgba(0, 0, 0, 0.03); X-offset, Y-offset, Blur, Spread, Color */
     grid-template-columns: repeat(2, 1fr); /* Adjust column widths as needed */
   }
 
   .experience-grid2 {
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0px 28px 28px 0px rgba(0, 0, 0, 0.03); /* X-offset, Y-offset, Blur, Spread, Color */
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Adjust column widths as needed */
     grid-template-rows: 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem; /* 4 filas de igual alto */
     grid-row-end: var(--text-color);
-    margin-bottom: 4rem;
+    margin: 0 0 10rem 0;
   }
 
   .row {
     display: block;
+    color: var(--text2-color);
     align-items: center; /* Optional: vertically center content */
   }
 
@@ -417,6 +427,7 @@ body {
     font-size: var(--text-size-little);
     font-weight: 500;
     line-height: 0;
+    color: var(--text2-color);
   }
 
   .numbers-text {
@@ -458,8 +469,7 @@ body {
   }
  
   .banner-container {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin: 0 0 10rem 0;
     overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
@@ -488,7 +498,7 @@ body {
   }
   
   .cases-section {
-    padding-top: 1rem;
+    margin: 2rem 0 10rem 0;
   }
 
   .case-image img {
@@ -519,7 +529,7 @@ body {
   font-size: var(--text-size-little);
   font-weight: lighter;
   line-height: 0;
-  color: var(--text2-color);
+  color: var(--text-color);
 }
 
 .cases-title {
@@ -535,15 +545,17 @@ body {
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: var(--text-color);
+  color: var(--bg-color);
   border: none;
   cursor: pointer;
   border-radius: 2rem;
+  text-decoration: none;
   text-decoration: none; /* Quita el subrayado por defecto */
 }
 
 .case-button-with-image a {
   text-decoration: none;
-  color: #000;
+  color: var(--bg-color)
 }
 
 .case-button-with-image:hover {
@@ -560,16 +572,10 @@ body {
   text-decoration: none; /* Quita el subrayado por defecto */
 }
 
-.case-button-with-image svg {
-  margin-left: 0.5rem;
-  height: 1rem;
-  width: auto;
-}
-
 .cases-paragraph-title {
   font-size: var(--text-size);
     font-weight: lighter;
-    color: var(--text2-color);
+    color: var(--text-color);
 }
 
 .cases-paragraph-inside{
@@ -591,20 +597,20 @@ body {
 }
 
 .about-section {
-  margin: 3rem 0;
-  padding: 1rem;
+  margin: 2rem 0 10rem 0;
 }
 
 .about-skills-description {
   font-size: var(--text-size);
   font-weight: lighter;
-  color: var(--text2-color);
+  color: var(--text-color);
 }
 
 .wow {
   width: 100%;
   font-size: 3rem;
   font-weight: lighter;
+  margin: 8rem 0 0 0;
 }
 
 .wow-principal-container {
@@ -641,7 +647,7 @@ body {
 .wow-description {
   font-size: var(--text-size-little);
   font-weight: 100;
-  color: var(--text2-color);
+  color: var(--text-color);
   line-height: 1rem;
 }
 
@@ -675,10 +681,23 @@ body {
 
 /* -------------------------------------------- */
   footer {
-    margin-top: 3rem;
+    margin: 3rem 0 0 0;
+    padding: 0 0 5rem 0;
     width: 100%;
     color: var(--text2-color);
     text-align: center;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 0;
+  }
+
+  .footer-column {
+    text-align: center;
+    border: none;
   }
   
   @media (orientation: portrait) {
@@ -704,6 +723,7 @@ body {
 
     .paragraph-title {
       text-align: justify;
+      color: var(--text-color);
     }
 
     .social-menu {
@@ -734,12 +754,13 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Adjust column widths as needed */
         grid-template-rows: 1fr 0fr 1fr 0 1fr 0 1fr 0;
-        margin-bottom: 4rem;
+        margin: 0 0 10rem 0;
         max-width: 100%;
     }
 
     .experience-dates-small {
       display: inline;
+      color: var(--text-color);
     }
 
     .column-experience-hide {
