@@ -12,9 +12,12 @@ body {
     margin: 2rem;
     padding: 2rem;
     font-family: Futura PT, sans-serif;
+    cursor: url('./src/cursor.png'), auto;
   }
 
-body.bac
+  button, a:hover {
+    cursor: url('./src/pointer.png'), auto;
+  }
 
 .navbar {
     position: sticky;
@@ -160,7 +163,6 @@ body.bac
   text-decoration: none;
   background-color: var(--hover-color); 
   color: var(--text-color);
-  cursor: pointer;
   border-radius: 2rem;
   border: none;
   width:fit-content;
@@ -220,7 +222,7 @@ body.bac
   
   .column-numbers {
     border: none;
-    padding: 1rem;
+    /* padding: 1rem; */
     align-self:baseline;
   }
   
@@ -297,7 +299,6 @@ body.bac
     color: var(--bg-color);
     border: solid;
     border-width: 0.1rem;
-    cursor: pointer;
     border-radius: 2rem;
     text-decoration: none; /* Quita el subrayado por defecto */
   }
@@ -359,7 +360,6 @@ body.bac
   /* .social-menu :hover{
     background-color: var(--text-color); 
     color: var(--bg-color);
-    cursor: pointer;
     border-radius: 2rem;
   } */
   .experience-section {
@@ -382,7 +382,7 @@ body.bac
     grid-template-columns: repeat(3, 1fr); /* Adjust column widths as needed */
     grid-template-rows: 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem 1fr 0.5rem; /* 4 filas de igual alto */
     grid-row-end: var(--text-color);
-    margin: 0 0 10rem 0;
+    margin: 0 0 8rem 0;
   }
 
   .row {
@@ -469,7 +469,7 @@ body.bac
   }
  
   .banner-container {
-    margin: 0 0 10rem 0;
+    margin: 0 0 4rem 0;
     overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
@@ -541,35 +541,32 @@ body.bac
 .case-button-with-image {
   font-size: 1rem;
   font-weight: 400;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: var(--text-color);
-  color: var(--bg-color);
   border: none;
-  cursor: pointer;
   border-radius: 2rem;
-  text-decoration: none;
-  text-decoration: none; /* Quita el subrayado por defecto */
 }
 
 .case-button-with-image a {
   text-decoration: none;
-  color: var(--bg-color)
+  color: var(--bg-color);
+  border: none;
+}
+
+.case-button-with-image a:hover {
+  text-decoration: none;
+  border: none;
+  color: var(--text-color);
 }
 
 .case-button-with-image:hover {
-  font-size: 1rem;
-  font-weight: 400;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  padding: 0.5rem 1rem;
   background-color: var(--hover-color);
-  color: var(--text-color);
   border: none;
-  cursor: pointer;
   border-radius: 2rem;
-  text-decoration: none; /* Quita el subrayado por defecto */
 }
 
 .cases-paragraph-title {
@@ -754,7 +751,7 @@ body.bac
         display: grid;
         grid-template-columns: 1fr 1fr; /* Adjust column widths as needed */
         grid-template-rows: 1fr 0fr 1fr 0 1fr 0 1fr 0;
-        margin: 0 0 10rem 0;
+        margin: 0 0 8rem 0;
         max-width: 100%;
     }
 
