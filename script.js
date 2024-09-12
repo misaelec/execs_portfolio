@@ -1,3 +1,4 @@
+// Counter Animation Function
 function animateCount(countElement, targetNumber, duration = 1400) {
   let start = 0;
   const increment = targetNumber / (duration / 10);
@@ -13,19 +14,18 @@ function animateCount(countElement, targetNumber, duration = 1400) {
   }, 10);
 }
 
-// Array of counter objects
-
+// Counter Elements and Targets
 const counters = [
   { element: document.getElementById('counter1'), target: 90 },
   { element: document.getElementById('counter2'), target: 45 },
   { element: document.getElementById('counter3'), target: 50 },
   { element: document.getElementById('counter4'), target: 100 },
   { element: document.getElementById('counter5'), target: 10 },
-  // ... more counters
 ];
 
 let animationTriggered = false;
 
+// Scroll Event Listener for Counter Animation
 window.addEventListener('scroll', () => {
   const counterSection = document.getElementById('experience');
   const sectionTop = counterSection.offsetTop;
@@ -40,6 +40,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Banner Animation
 const bannerContainer = document.querySelector('.banner-container');
 const bannerWidth = bannerContainer.scrollWidth;
 const containerWidth = bannerContainer.clientWidth;
@@ -57,31 +58,3 @@ function animateBanner() {
 }
 
 animateBanner();
-
-const bubbleContainer = document.querySelector('.bubble-container');
-
-function createBubble() {
-  const bubble = document.createElement('div');
-  bubble.classList.add('bubble');
-
-  // Randomize size, position, and color
-  const size = Math.random() * 40 + 10;
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
-
-  const x = Math.random() * 100;
-  const y = Math.random() * 100;
-  bubble.style.left = `${x}%`;
-  bubble.style.top = `${y}%`;
-
-  const colors = ['#F0E68C', '#87CEEB', '#FFB6C1'];
-  bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-  bubbleContainer.appendChild(bubble);
-
-  setTimeout(() => {
-    bubble.remove();
-  }, 4000 + Math.random() * 2000); // Random lifespan
-}
-
-setInterval(createBubble, 500); // Create bubbles every 500ms
