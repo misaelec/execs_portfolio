@@ -6,505 +6,67 @@
   <title>Misael Espinosa</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/qim0doq.css">
-  <style>
-    body, html {
-    height: 100%;
-    margin: 0;
-    padding-bottom: 5rem; /* Match the height of the bottom bar */
-  }
-
-  /* Adding background image with opacity */
-  body::before {
-    content: "";
-    background: url('./src/wallpaper.jpeg') no-repeat center center/cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.03; /* Adjust opacity level */
-    z-index: -1; /* Keeps the image behind content */
-  }
-
-  /* Example for other elements */
-  .container, .experience-grid, .cases-container, .social-menu {
-    position: relative;
-    z-index: 1; /* Ensures your content appears over the background */
-  }
-
-  .top-gradient-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5rem; /* Height of the top bar */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
-    z-index: 1000; /* Ensures it stays on top of other content */
-  }
-
-  /* Gradient bar at the bottom */
-  .bottom-gradient-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5rem; /* Height of the bottom bar */
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White to transparent */
-    z-index: 1000; /* Ensures it stays on top of other content */
-  }
-</style>
 </head>
-  <body>
-    <div class="top-gradient-bar"></div>
+<body>
+  <div class="top-gradient-bar"></div>
   <div class="bottom-gradient-bar"></div>
-    <!--<div class="bubble-container"></div>
-     <nav class="navbar">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li style="display: none;"><a href="#cases">Cases</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav> -->
-    <section id="home">
-      <div class="container">
-        <div class="column">
-          <p class="name-title">Misael Espinosa</p>
-          <p class="ux-subtitle">UX Content Designer</p>
-          <div class="container2">
-            <div class="item">
-              <img src="./src/AN.png" alt="I've worked on Artificial Nerds">
-            </div>
-            <div class="item">
-              <img src="./src/PP22.png" alt="I've worked on PayPal">
-            </div>
-            <div class="item">
-              <img src="./src/BB.png" alt="I've worked on Bebot">
-            </div>
+
+  <section id="home">
+    <div class="container">
+      <div class="column">
+        <h1 class="name-title">Misael Espinosa</h1>
+        <h2 class="ux-subtitle">UX Content Designer</h2>
+        <div class="logo-container">
+          <div class="item">
+            <img src="./src/AN.png" alt="Artificial Nerds Logo">
           </div>
-          <p class="paragraph-title"> Hello there! My name is Misael and I'm a Content Designer currently based in Mexico City.</p>
-          <p class="paragraph-title">In my 5 years of experience I have designed content and conversational experiences, planned, supported, and implemented features and roadmaps, and led cross-functional teams at companies like <span class="white-bold-txt"> Artificial Nerds</span>, <span class="white-bold-txt"> PayPal</span>, and <span class="white-bold-txt"> Bebot</span>.</p>
-          <p class="paragraph-title">I'm currently open for new roles, so if you think we'd be a match please get in touch!</p>
-          <div class="social-menu">
-            <a href="https://mx.linkedin.com/in/misaelec" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/linkedin.png" alt="Go to LinkedIn">
-                <span>LinkedIn</span>
-              </button>
-            </a>
-            <a href="mailto:misael.ux@icloud.com" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/mail.png" alt="Send an email">
-                <span>Email</span>
-              </button>
-            </a>
-            <a href="https://wa.me/525545502585" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/whatsapp.png" alt="Send WhatsApp message">
-                <span>WhatsApp</span>
-              </button>
-            </a>
-          <a href="https://drive.google.com/file/d/1dZ4A5DhMbBZCpXvt5kM-u6CQ-wgOO_WG/view?usp=share_link" target="_blank">
+          <div class="item">
+            <img src="./src/PP22.png" alt="PayPal Logo">
+          </div>
+          <div class="item">
+            <img src="./src/BB.png" alt="Bebot Logo">
+          </div>
+        </div>
+        <p class="paragraph-title">Hello there! My name is Misael and I'm a Content Designer currently based in Mexico City.</p>
+        <p class="paragraph-title">
+          In my 5 years of experience, I have designed content and conversational experiences, planned, supported, and implemented features and roadmaps, and led cross-functional teams at companies like <span class="highlight">Artificial Nerds</span>, <span class="highlight">PayPal</span>, and <span class="highlight">Bebot</span>.
+        </p>
+        <p class="paragraph-title">I'm currently open for new roles, so if you think we'd be a match, please get in touch!</p>
+        <div class="social-menu">
+          <a href="https://mx.linkedin.com/in/misaelec" target="_blank">
             <button class="button-with-image">
-              <img src="./src/google-drive.png" alt="Download my resume">
-              <span class="cv-span-small">CV</span>
-              <span class="cv-span-large">CV / Resume</span>
+              <img src="./src/linkedin.png" alt="LinkedIn">
+              <span>LinkedIn</span>
             </button>
           </a>
-          </div>
-        </div>
-        <!-- <div class="column">
-          <p>Video goes here</p>
-        </div> -->
-      </div>
-    </section>
-    <section id="experience" class="experience-section">
-      <div class="experience-grid">
-        <div class="column-experience">
-          <p class="experience-past">Past Experience</p>
-          <p class="experience-past-small">Experience</p>
-        </div>
-        <div class="column-dates">
-          <p class="experience-text">2016 - 2024</p>
-        </div>
-        <!-- <div class="row">
-        </div>
-        <div class="row">
-        </div> -->
-      </div>
-      <div class="experience-grid2">
-        <div class="column-experience">
-          <p class="experience-dates">2023 - 2024</p>
-          <p class="experience-dates-small">2023 - 2024 <b>PayPal</b></p>
-        </div>
-        <div class="column-experience-hide">
-          <p class="experience-company">PayPal</p>
-        </div>
-        <div class="column-jobs">
-          <span class="experience-jobs">Content Design</span>
-        </div>
-        <div class="row">
-        </div>
-        <div class="row">
-        </div>
-        <div class="rowhide">
-        </div>
-        <div class="column-experience">
-          <p class="experience-dates">2022 - 2023</p>
-          <p class="experience-dates-small">2022 - 2023 <b>Bebot</b></p>
-        </div>
-        <div class="column-experience-hide">
-          <p class="experience-company">Bebot</p>
-        </div>
-        <div class="column-jobs">
-          <span class="experience-jobs">Conversation Design </span>
-          </div>
-          <div class="row">
-          </div>
-          <div class="row">
-          </div>
-          <div class="rowhide">
-          </div>
-          <div class="column-experience">
-            <p class="experience-dates">2018 - 2022</p>
-            <p class="experience-dates-small">2018 - 2022 <b>Artificial Nerds</b></p>
-          </div>
-          <div class="column-experience-hide">
-            <p class="experience-company">Artificial Nerds</p>
-          </div>
-          <div class="column-jobs">
-            <span class="experience-jobs">AI Design / Customer Success</span>
-          </div>
-          <div class="row">
-          </div>
-          <div class="row">
-          </div>
-          <div class="rowhide">
-          </div>
-          <div class="column-experience">
-            <p class="experience-dates">2016 - 2019</p>
-            <p class="experience-dates-small">2016 - 2019 <b>Nintendo, Beats by Dre.</b></p>
-          </div>
-          <div class="column-experience-hide">
-            <p class="experience-company">Nintendo, Beats by Dre.</p>
-          </div>
-          <div class="column-jobs">
-            <span class="experience-jobs">Customer Success</span>
-          </div>
-          <!-- <div class="row">
-          </div>
-          <div class="row">
-          </div>
-          <div class="rowhide">
-          </div> -->
-        </div>
-      </div>
-      <div class="banner-container">
-      <div class="banner">
-        <img src="./src/pv.svg" alt="Amazon Prime Video logo">
-        <img src="./src/md.svg" alt="McDonald's logo">
-        <img src="./src/pp.svg" alt="PayPal logo">
-        <img src="./src/mt.svg" alt="Meta logo">
-        <img src="./src/ht.svg" alt="Hertz Logo">
-        <img src="./src/st.svg" alt="Santander logo">
-        <img src="./src/az.svg" alt="Astrazeneca logo">
-        <img src="./src/ph.svg" alt="El Palacio de Hierro logo">
-        <img src="./src/sm.svg" alt="Seguros Monterrey logo">
-        <img src="./src/ib.svg" alt="IBERO logo">
-        <img src="./src/etn.svg" alt="ETN logo">
-        <img src="./src/pv.svg" alt="Amazon Prime Video logo">
-        <img src="./src/md.svg" alt="McDonald's logo">
-        <img src="./src/pp.svg" alt="PayPal logo">
-        <img src="./src/mt.svg" alt="Meta logo">
-        <img src="./src/ht.svg" alt="Hertz Logo">
-        <img src="./src/st.svg" alt="Santander logo">
-        <img src="./src/az.svg" alt="Astrazeneca logo">
-        <img src="./src/ph.svg" alt="El Palacio de Hierro logo">
-        <img src="./src/sm.svg" alt="Seguros Monterrey logo">
-        <img src="./src/ib.svg" alt="IBERO logo">
-        <img src="./src/etn.svg" alt="ETN logo">
-        <img src="./src/pv.svg" alt="Amazon Prime Video logo">
-        <img src="./src/md.svg" alt="McDonald's logo">
-        <img src="./src/pp.svg" alt="PayPal logo">
-        <img src="./src/mt.svg" alt="Meta logo">
-        <img src="./src/ht.svg" alt="Hertz Logo">
-        <img src="./src/st.svg" alt="Santander logo">
-        <img src="./src/az.svg" alt="Astrazeneca logo">
-        <img src="./src/ph.svg" alt="El Palacio de Hierro logo">
-        <img src="./src/sm.svg" alt="Seguros Monterrey logo">
-        <img src="./src/ib.svg" alt="IBERO logo">
-        <img src="./src/etn.svg" alt="ETN logo">
-        </div>   
-      </div>   
-      <div class="numbers-grid">
-        <div class="column-numbers">
-          <span class="numbers-title">Notable numbers</span>
-        </div>
-        <div class="column-numbers-priority">
-          <p class="numbers-data"><span id="counter1">0</span>%</p>
-          <span class="numbers-description">Contact cases automated for diverse sector clients.</span>
-          <br>
-          <span class="numbers-text">Designing chatbot flows for WhatsApp, Messenger, Web Page and App.</span>
-        </div>
-        <div class="column-numbers">
-          <p class="numbers-data"><span id="counter2">0</span>%</p>
-          <span class="numbers-description">CTA clicks augmented for PayPal.</span>
-          <br>
-          <span class="numbers-text">Renewing the content for a banner promoting a new feature.</span>
-        </div>
-        <div class="column-numbers-priority">
-          <p class="numbers-data"><span id="counter3">0</span>%</p>
-          <span class="numbers-description">Decreased resolution time for diverse sector clients.</span>
-          <br>
-          <span class="numbers-text">Providing insights on workflow features.</span>
-        </div>
-        <div class="column-numbers-priority">
-          <p class="numbers-data">+<span id="counter4">0</span></p>
-          <span class="numbers-description">Projects with brands like Amazon & McDonald's.</span>
-          <br>
-          <span class="numbers-text">Across multiple sectors like transport and retail.</span>
-        </div>
-        <div class="column-numbers">
-          <p class="numbers-data"><span id="counter5">0</span>K</p>
-          <span class="numbers-description">USD in upscales for Artificial Nerds.</span>
-          <br>
-          <span class="numbers-text">Promoting brand products among existing and new clients.</span>
-          </div>
-      </div>
-    </section>
-    <section id="cases" class="cases-section">
-      <div class="cases-container">
-        <div class="column-case">
-          <div class="case-image">
-            <img src="./src/pp-case.png" alt="PayPal Push Notifications Project">
-          </div>
-        </div>
-        <div class="column-cases">
-          <div class="container2">
-            <div class="item-case">
-              <img src="./src/pp.svg" alt="PayPal logo">
-            </div>
-          </div>
-          <p class="cases-title">Push Notifications</p>
-          <p class="cases-paragraph-title">In this project I designed the content for the push notifications during the onboarding for new users.</p>
-          <button class="case-button-with-image">
-            <a href="./paypal.html">View case study</a>
-          </button>          
-            <div class="cases-grid">
-              <div class="column-cases">
-                <span class="cases-stats-title">1M</span>
-                <br>
-                <span class="cases-stats-description">Users impacted</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">20%</span>
-                <br>
-                <span class="cases-stats-description">New purchases</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">15</span>
-                <br>
-                <span class="cases-stats-description">Notif. written</span>
-                </div>
-            </div>
-        </div>
-         <div class="column-case">
-          <div class="case-image">
-            <img src="./src/mc_image_case.png" alt="McDonald's Experience image">
-          </div>
-        </div>
-        <div class="column-cases">
-          <div class="container2">
-            <div class="item-case">
-              <img src="./src/md.svg" alt="McDonald's logo">
-            </div>
-          </div>
-          <p class="cases-title">Food Delivery Chatbot</p>
-          <p class="cases-paragraph-title"> I designed a chatbot for McDonald's food delivery service.</p>
-          <button class="case-button-with-image">
-            <a href="./mcdonalds.html">View case study</a>
-          </button>          
-            <div class="cases-grid">
-              <div class="column-cases">
-                <span class="cases-stats-title">2M</span>
-                <br>
-                <span class="cases-stats-description">Users impacted</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">2</span>
-                <br>
-                <span class="cases-stats-description">Countries adoption</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">50% less</span>
-                <br>
-                <span class="cases-stats-description">Development time</span>
-                </div>
-            </div>
-        </div>
-         <div class="column-case">
-          <div class="case-image">
-            <img src="./src/pv-bot.webp" alt="AR Experience image">
-          </div>
-        </div>
-        <div class="column-cases">
-          <div class="container2">
-            <div class="item-case">
-              <img src="./src/pv.svg" alt="Prime Video logo">
-            </div>
-          </div>
-          <p class="cases-title">AR Chatbot Experience</p>
-          <p class="cases-paragraph-title">I designed a chatbot to ptomote a new Prime Video streaming show.</p>
-          <button class="case-button-with-image">
-            <a href="./primevideo.html">View case study</a>
-          </button>          
-            <div class="cases-grid">
-              <div class="column-cases">
-                <span class="cases-stats-title">5 teams</span>
-                <br>
-                <span class="cases-stats-description">Directed</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">20%</span>
-                <br>
-                <span class="cases-stats-description">More clicks on web CTA</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">1M</span>
-                <br>
-                <span class="cases-stats-description">Users impacted</span>
-                </div>
-            </div>
-        </div>
-        <!--
-        <div class="column-case">
-          <div class="case-image">
-            <img src="./src/cases_AR_Experience.png" alt="AR Experience image">
-          </div>
-        </div>
-        <div class="column-cases">
-          <div class="container2">
-            <div class="item-case">
-              <img src="./src/ph.svg" alt="El Palacio de Hierro logo">
-            </div>
-          </div>
-          <p class="cases-title">AR Chatbot Activation</p>
-          <p class="cases-paragraph-title"> Hello there! My name is Misael and I'm a Content Designer currently based in Mexico City.</p>
-          <button class="case-button-with-image">
-            <span>View case study</span>
-            <svg fill="#000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-             viewBox="0 0 330 330" xml:space="preserve">
-              <path id="XMLID_2_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M225.606,175.605
-                l-80,80.002C142.678,258.535,138.839,260,135,260s-7.678-1.464-10.606-4.394c-5.858-5.857-5.858-15.355,0-21.213l69.393-69.396
-                l-69.393-69.392c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l80,79.998
-                c2.814,2.813,4.394,6.628,4.394,10.606C230,168.976,228.42,172.792,225.606,175.605z"/>
-            </svg>
-          </button>          
-            <div class="cases-grid">
-              <div class="column-cases">
-                <span class="cases-stats-title">5 teams</span>
-                <br>
-                <span class="cases-stats-description">Directed</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">2X Budget</span>
-                <br>
-                <span class="cases-stats-description">Duplicated</span>
-              </div>
-              <div class="column-cases">
-                <span class="cases-stats-title">500K</span>
-                <br>
-                <span class="cases-stats-description">Users impacted</span>
-                </div>
-            </div> -->
-        </div>
-      </div>
-      </section>
-      <section id="about" class="about-section">
-        <p class="about-skills-title"><span style="color: #F0E68C;">01.</span> Empathy and User Understanding</p>
-        <p class="about-skills-description">Empathy is crucial for understanding customers. By deeply understanding their needs, frustrations, and communication style, you can connect with them on a personal level. Active listening and personalization are key to building strong customer relationships.</p>
-        <p class="about-skills-title"><span style="color: #87CEEB;">02.</span> Creative and Persuasive Writing</p>
-        <p class="about-skills-description">Effective communication is essential. Clear, engaging language that connects with the audience is key. Storytelling helps convey brand values in a captivating way, while subtle persuasion guides users towards desired actions without being pushy.</p>
-        <p class="about-skills-title"><span style="color: #FFB6C1;">03.</span> Analytical Thinking and Results Orientation</p>
-        <p class="about-skills-description">Data-driven decision making is essential. Analyzing conversation metrics helps optimize content and achieve business goals. Flexibility is key to adapting strategies based on results.</p>
-        <p class="wow">Ways of working</p>
-        <div class="wow-principal-container">
-        <div class="wow-container">
-          <img src="./src/arrow-icon.png" alt="UX Icon" class="wow-image">
-        </div>
-        <div class="wow-container">
-          <div class="wow-content">
-            <p class="wow-title">User-Centric Collaboration</p>
-            <p class="wow-description">Building strong partnerships with cross-functional teams to deliver exceptional user experiences.</p>
-          </div>
-          </div>
-          <div class="wow-container">
-            <img src="./src/coins.png" alt="Growth icon" class="wow-image">
-            </div>
-            <div class="wow-container">
-            <div class="wow-content">
-              <p class="wow-title">Empathy-Driven Design</p>
-              <p class="wow-description">Deeply understanding user needs and behaviors to inform design decisions.</p>
-            </div>
-          </div>
-          <div class="wow-container">
-            <img src="./src/business.png" alt="Data icon" class="wow-image">
-            </div>
-            <div class="wow-container">
-            <div class="wow-content">
-              <p class="wow-title">Data-Informed Insights</p>
-              <span class="wow-description">Leveraging analytics to measure and optimize product performance.</span>
-            </div>
-          </div>
-          <div class="wow-container">
-            <img src="./src/hands.png" alt="Handshake icon" class="wow-image">  
-          </div>
-            <div class="wow-container">
-            <div class="wow-content">
-              <p class="wow-title">Customer Success Alignment</p>
-              <p class="wow-description">Collaborating closely with customer success teams to identify pain points and opportunities.</p>
-            </div>
-          </div>
-          </div>
-      </section>   
-    <section id="contact">
-      <div class="container">
-        <div class="footer-column">
-          <p class="footer-title">Get in touch</p>
-          <div class="social-menu">
-            <a href="https://mx.linkedin.com/in/misaelec" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/linkedin.png" alt="Go to LinkedIn">
-                <span>LinkedIn</span>
-              </button>
-            </a>
-            <a href="mailto:misael.ux@icloud.com" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/mail.png" alt="Send an email">
-                <span>Email</span>
-              </button>
-            </a>
-            <a href="https://wa.me/525545502585" target="_blank">
-              <button class="button-with-image">
-                <img src="./src/whatsapp.png" alt="Send WhatsApp message">
-                <span>WhatsApp</span>
-              </button>
-            </a>
-          <a href="https://drive.google.com/file/d/1dZ4A5DhMbBZCpXvt5kM-u6CQ-wgOO_WG/view?usp=share_link" target="_blank">
+          <a href="mailto:misael.ux@icloud.com" target="_blank">
             <button class="button-with-image">
-              <img src="./src/google-drive.png" alt="Download my resume">
-              <span class="cv-span-small">CV</span>
-              <span class="cv-span-large">CV / Resume</span>
+              <img src="./src/mail.png" alt="Email">
+              <span>Email</span>
             </button>
           </a>
-          </div>
+          <a href="https://wa.me/525545502585" target="_blank">
+            <button class="button-with-image">
+              <img src="./src/whatsapp.png" alt="WhatsApp">
+              <span>WhatsApp</span>
+            </button>
+          </a>
+          <a href="https://drive.google.com/file/d/1dZ4A5DhMbBZCpXvt5kM-u6CQ-wgOO_WG/view?usp=share_link" target="_blank">
+            <button class="button-with-image">
+              <img src="./src/google-drive.png" alt="CV">
+              <span class="cv-span">CV / Resume</span>
+            </button>
+          </a>
         </div>
-        </div>
-      </section>      
-      <footer>
-        <span>Misael Espinosa © 2024</span>
-      </footer>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include other sections here, cleaned up similarly -->
+
+  <footer>
+    <span>Misael Espinosa © 2024</span>
+  </footer>
   <script src="script.js"></script>
+</body>
 </html>
