@@ -254,8 +254,8 @@ body {
   }
 
   .experience-company {
-    font-size: var(--text-size-little);
-    font-weight: bold;
+    font-size: var(--text-size);
+    font-weight: 500;
     color: var(--text-color);
     text-align: left;
   }
