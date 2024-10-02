@@ -108,6 +108,37 @@ body {
     display: none;
   }
 
+  .back-button-container {
+    margin: 20px;
+  }
+  
+  .back-button {
+    font-size: var(--text-size-little);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--text-color); 
+    color: var(--bg-color);
+    border: none;
+    border-radius: 2rem;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    width: fit-content;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    text-decoration: none;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border-color: var(--hover-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .back-arrow {
+    font-size: 18px;
+    margin-right: 8px;
+  }  
+
   .container {
     display: grid;
     grid-template-columns: 1fr; /* Create two equal columns */
@@ -127,7 +158,7 @@ body {
   /*grid w images*/
   .container2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Create two equal columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Create two equal columns */
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 10rem;
@@ -546,14 +577,17 @@ body {
 }
 
 .case-button-with-image {
-  font-size: 1rem;
-  font-weight: 400;
-  /* display: flex; */
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: var(--text-color);
-  border: none;
-  border-radius: 2rem;
+  font-size: var(--text-size-little);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--text-color); 
+    color: var(--bg-color);
+    border: none;
+    border-radius: 2rem;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    width: fit-content;
+    text-decoration: none;
 }
 
 .case-button-with-image a {
@@ -569,11 +603,11 @@ body {
 }
 
 .case-button-with-image:hover {
-  /* display: flex; */
-  align-items: center;
-  background-color: var(--hover-color);
-  border: none;
-  border-radius: 2rem;
+  text-decoration: none;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    border-color: var(--hover-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .cases-paragraph-title {
