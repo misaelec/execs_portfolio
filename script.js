@@ -1,3 +1,4 @@
+// Function to animate counters
 function animateCount(countElement, targetNumber, duration = 1400) {
   let start = 0;
   const increment = targetNumber / (duration / 10);
@@ -13,75 +14,50 @@ function animateCount(countElement, targetNumber, duration = 1400) {
   }, 10);
 }
 
-// Array of counter objects
-
+// Counter elements and their target numbers
 const counters = [
   { element: document.getElementById('counter1'), target: 90 },
   { element: document.getElementById('counter2'), target: 45 },
   { element: document.getElementById('counter3'), target: 50 },
   { element: document.getElementById('counter4'), target: 100 },
   { element: document.getElementById('counter5'), target: 10 },
-  // ... more counters
 ];
 
 let animationTriggered = false;
 
+// Event listener to trigger counter animation on scroll
 window.addEventListener('scroll', () => {
-  const counterSection = document.getElementById('experience');
-  const sectionTop = counterSection.offsetTop;
-  const windowHeight = window.innerHeight;
-  const scrollPosition = window.scrollY || window.pageYOffset;
+  const numbersSection = document.querySelector('.numbers-grid');
+  if (!numbersSection) return; // Exit if the section doesn't exist
 
-  if (!animationTriggered && scrollPosition >= sectionTop - windowHeight) {
+  const sectionTop = numbersSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (!animationTriggered && sectionTop <= windowHeight - 100) { // Adjusted threshold
     animationTriggered = true;
     counters.forEach(counter => {
-      animateCount(counter.element, counter.target);
+      if (counter.element) {
+        animateCount(counter.element, counter.target);
+      }
     });
   }
 });
 
+// Banner animation
 const bannerContainer = document.querySelector('.banner-container');
-const bannerWidth = bannerContainer.scrollWidth;
-const containerWidth = bannerContainer.clientWidth;
-let scrollPosition = 0;
+if (bannerContainer) {
+  let scrollPosition = 0;
 
-function animateBanner() {
-  scrollPosition += 1.5; // Adjust scroll speed as needed
-  bannerContainer.scrollLeft = scrollPosition;
+  function animateBanner() {
+    scrollPosition += 1.5; // Adjust scroll speed as needed
+    bannerContainer.scrollLeft = scrollPosition;
 
-  if (scrollPosition >= bannerWidth - containerWidth) {
-    scrollPosition = 0;
+    if (scrollPosition >= bannerContainer.scrollWidth - bannerContainer.clientWidth) {
+      scrollPosition = 0;
+    }
+
+    requestAnimationFrame(animateBanner);
   }
 
-  requestAnimationFrame(animateBanner);
+  animateBanner();
 }
-
-animateBanner();
-
-const bubbleContainer = document.querySelector('.bubble-container');
-
-function createBubble() {
-  const bubble = document.createElement('div');
-  bubble.classList.add('bubble');
-
-  // Randomize size, position, and color
-  const size = Math.random() * 40 + 10;
-  bubble.style.width = `${size}px`;
-  bubble.style.height = `${size}px`;
-
-  const x = Math.random() * 100;
-  const y = Math.random() * 100;
-  bubble.style.left = `${x}%`;
-  bubble.style.top = `${y}%`;
-
-  const colors = ['#F0E68C', '#87CEEB', '#FFB6C1'];
-  bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-  bubbleContainer.appendChild(bubble);
-
-  setTimeout(() => {
-    bubble.remove();
-  }, 4000 + Math.random() * 2000); // Random lifespan
-}
-
-setInterval(createBubble, 500); // Create bubbles every 500ms
