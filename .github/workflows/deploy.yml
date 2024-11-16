@@ -1,9 +1,9 @@
-name: Deploy to Google Cloud Storage
+name: Deploy to Google Cloud Storage (Two Buckets)
 
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Change this if you want to deploy from a different branch
 
 jobs:
   deploy:
@@ -26,7 +26,12 @@ jobs:
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      # Step 4: Deploy to Google Cloud Storage
-      - name: Deploy to Google Cloud Storage
+      # Step 4: Sync files to root domain bucket (example.com)
+      - name: Sync to root domain bucket
         run: |
-          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_NAME }}
+          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_ROOT }}
+
+      # Step 5: Sync files to www subdomain bucket (www.example.com)
+      - name: Sync to www subdomain bucket
+        run: |
+          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_WWW }}
