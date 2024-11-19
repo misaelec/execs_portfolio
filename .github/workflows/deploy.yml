@@ -30,8 +30,3 @@ jobs:
       - name: Sync to root domain bucket
         run: |
           gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_ROOT }}
-
-      # Step 5: Sync files to www subdomain bucket (www.example.com)
-      - name: Sync to www subdomain bucket
-        run: |
-          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_WWW }}
