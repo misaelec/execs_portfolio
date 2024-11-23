@@ -26,7 +26,12 @@ jobs:
         with:
           project_id: ${{secrets.GCP_PROJECT_ID}}
 
-      # Step 5: Sync files to www bucket (www.example.com)
-      - name: Sync to www subdomain bucket
+      # Step 4: Sync files to app domain bucket (example.com)
+      - name: Sync to app domain bucket
+        run: |
+          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_APP}}
+
+      # Step 5: Sync files to www subdomain bucket (www.example.com)
+      - name: Sync to www domain bucket
         run: |
           gsutil rsync -r ./ gs://${{secrets.GCP_BUCKET_WWW}}
