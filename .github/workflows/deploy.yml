@@ -20,5 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           local-dir: './'  # Adjust if necessary
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}/
           protocol: ftps  # Use 'ftp' if 'ftps' is not supported
