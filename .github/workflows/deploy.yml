@@ -1,37 +1,24 @@
-name: Deploy to Google Cloud Storage (Two Buckets)
+name: Deploy to Namecheap Hosting
 
 on:
   push:
     branches:
-      - main  # Change this if you want to deploy from a different branch
+      - main  # Replace with your default branch if different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the code
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Authenticate with Google Cloud
-      - name: Authenticate with Google Cloud
-        uses: google-github-actions/auth@v1
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.1
         with:
-          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
-
-      # Step 3: Set up Google Cloud SDK
-      - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v1
-        with:
-          project_id: ${{secrets.GCP_PROJECT_ID}}
-
-      # Step 4: Sync files to app domain bucket (example.com)
-      - name: Sync to app domain bucket
-        run: |
-          gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_APP}}
-
-      # Step 5: Sync files to www subdomain bucket (www.example.com)
-      - name: Sync to www domain bucket
-        run: |
-          gsutil rsync -r ./ gs://${{secrets.GCP_BUCKET_WWW}}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: './'  # Adjust if necessary
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          protocol: ftps  # Use 'ftp' if 'ftps' is not supported
