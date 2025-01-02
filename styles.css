@@ -86,8 +86,9 @@ body::before {
 .logo-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1rem, 1rem, 1rem;
   border-radius: 10rem;
 }
 
