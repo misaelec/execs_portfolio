@@ -126,7 +126,7 @@ body::before {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 2rem;
-  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 .button-with-image img {
