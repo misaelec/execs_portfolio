@@ -123,27 +123,29 @@ body::before {
   text-decoration: none;
   background-color: var(--text-color);
   color: var(--bg-color);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem; /* Increased padding for more rounded appearance */
   border: none;
-  border-radius: 2rem;
-  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  border-radius: 3rem; /* More rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-with-image img {
-  margin-right: 0.5rem;
-  height: 1rem;
+  margin-right: 0.75rem; /* Increased space between the icon and text */
+  height: 1.25rem; /* Slightly larger icon for better balance */
 }
 
 .button-with-image:hover {
   background-color: var(--hover-color);
   color: var(--text-color);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Smooth floating effect */
 }
 
 .cv-span-large,
 .cv-span-small {
   display: none;
 }
+
 
 /* Experience Section */
 .experience-section {
@@ -219,72 +221,127 @@ body::before {
 
 /* Banner Section */
 .banner-section {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; /* Spacing below the banner */
 }
 
+/* Banner Container */
 .banner-container {
-  overflow-x: scroll;
-  white-space: nowrap;
-  width: 100%;
-  height: 2.1rem;
-}
-
-.banner {
-  display: flex;
-}
-
-.banner img {
-  object-fit: contain;
-  align-self: center;
-  flex-shrink: 0;
-  padding-right: 4rem;
-  max-height: 2rem;
+  overflow: hidden; /* Hide the scrollbar */
+  white-space: nowrap; /* Keep items in a single line */
+  width: 100%; /* Define the visible area */
+  height: 2.1rem; /* Adjust to your banner's height */
+  display: flex; /* Align child elements in a row */
+  -ms-overflow-style: none; /* Hide scrollbar in IE */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
 .banner-container::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hide scrollbar in Chrome/Safari */
 }
 
-.banner-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* Banner Content */
+.banner {
+  display: flex; /* Align logos horizontally */
+  gap: 1rem; /* Space between logos */
+}
+
+/* Logo Styles */
+.banner img {
+  object-fit: contain; /* Ensure logos are fully visible */
+  align-self: center; /* Center align logos vertically */
+  flex-shrink: 0; /* Prevent resizing of logos */
+  margin-right: 2rem; /* Add space between logos */
+  max-height: 2rem; /* Set a consistent logo height */
 }
 
 /* Notable Numbers Section */
 .numbers-section {
-  margin-bottom: 4rem;
+  padding: 0 0 0 2rem;
+  max-width: 1200px;
 }
 
 .numbers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: auto auto;
+  align-items: center;
 }
 
 .column-numbers,
 .column-numbers-priority {
   border: none;
-  align-self: baseline;
+  padding: 1rem; /* Reduced padding for tighter space around the numbers */
 }
 
 .numbers-title {
-  font-size: 2rem;
+  font-size: 2rem; /* Title font size */
   font-weight: 900;
   text-transform: uppercase;
-  align-self: center;
+  text-align: center;
+  grid-column: span 3;
+  margin: 9rem 0 0 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .numbers-data {
-  font-size: 8rem;
+  font-size: 9rem;
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.5; /* Tightened line height to reduce space above and below numbers */
+  text-align: center;
+  color: var(--primary-color);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Remove any padding to reduce space around numbers */
 }
 
-.numbers-description,
+.numbers-description {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text2-color);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.empty-line {
+  height: 1.5rem;
+}
+
 .numbers-text {
   font-size: var(--text-size-little);
   font-weight: 500;
-  color: var(--text2-color);
+  color: #333;
+  text-align: center;
+}
+
+.column-numbers-priority {
+  grid-column: span 1;
+}
+
+@media screen and (max-width: 768px) {
+  .numbers-section {
+    padding: 0;
+  }
+
+  .numbers-title {
+    font-size: 1.75rem;
+  }
+
+  .numbers-data {
+    font-size: 6rem;
+  }
+
+  .numbers-description,
+  .numbers-text {
+    font-size: var(--text-size-little);
+  }
+
+  .numbers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .column-numbers-priority {
+    grid-column: span 1;
+  }
 }
 
 /* Cases Section */
