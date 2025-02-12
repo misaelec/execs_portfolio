@@ -17,7 +17,7 @@ function animateCount(countElement, targetNumber, duration = 1400) {
 // Counter elements and their target numbers
 const counters = [
   { element: document.getElementById('counter1'), target: 90 },
-  { element: document.getElementById('counter2'), target: 30 },
+  { element: document.getElementById('counter2'), target: 200 },
   { element: document.getElementById('counter3'), target: 50 },
   { element: document.getElementById('counter4'), target: 100 },
   { element: document.getElementById('counter5'), target: 10 },
